@@ -1,0 +1,26 @@
+/*
+ * Layout
+ */
+.cc {
+    background: #FFF;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    &:first-child {
+        z-index: 100;
+    }
+    &.animating {
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+}
+
+.shell {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+    padding: 0 50px;
+}

@@ -1,0 +1,11 @@
+.btn_toggle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  &:hover {
+    color: $gold;
+  }
+  &.active {
+    color: $silver;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "NovelMusings",
+  "version": "0.1.0",
+  "author": "Matthew Denton <matt@mdbitz.com>",
+  "homepage": "https://mdbitz.com",
+  "_themepath": "../wp-content/themes/novelmusings_2016",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-cache": "^0.2.8",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.9.4",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-newer": "^0.5.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.1.0",
+    "jshint-stylish": "^2.1.0"
+  }
+}

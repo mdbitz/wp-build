@@ -1,0 +1,117 @@
+@mixin clearfix() {
+	clear:both;
+	zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+@mixin breakpoint($breakpoint, $width: min) {
+	@media (#{$width}-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin breakheight($breakheight, $height: min) {
+	@media (#{$height}-height: $breakheight) {
+		@content;
+	}
+}
+
+@mixin breaksize($breakwidth, $width, $breakheight, $height) {
+	@media (#{$width}-width: $breakwidth) and (#{$height}-height: $breakheight) {
+		@content;
+	}
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin transition($transition: .25s ease-out) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transition: $transition;
+    }
+
+    transition: $transition;
+}
+
+@mixin transition-delay($delay: 1s) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transition-delay: $delay;
+    }
+
+    transition-delay: $delay;
+}
+
+@mixin transition-duration($duration: 1s) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transition-duration: $duration;
+    }
+
+    transition-duration: $duration;
+}
+
+@mixin transition-property($property: 1s) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transition-property: $property;
+    }
+
+    transition-property: $property;
+}
+
+@mixin transform($transform...) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transform: $transform;
+    }
+
+    transform: $transform;
+}
+
+@mixin transform-origin($origin...) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transform-origin: $origin;
+    }
+
+    transform-origin: $origin;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation($animation...) {
+    $prefixes:      ("-webkit", "-moz", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-animation: $animation;
+    }
+
+    animation: $animation;
+}
+
+@mixin triple-gradient($primary, $primary-start, $primary-stop, $secondary, $secondary-start, $secondary-stop, $tertiary, $tertiary-start, $tertiary-stop, $deg: 0deg) {
+	background: $secondary;
+	background: -webkit-linear-gradient($deg,  $primary $primary-start,$primary $primary-stop,$secondary $secondary-start,$secondary $secondary-stop,$tertiary $tertiary-start,$tertiary $tertiary-start);
+	background: -moz-linear-gradient($deg,  $primary $primary-start, $primary $primary-stop, $secondary $secondary-start, $secondary $secondary-stop, $tertiary $tertiary-start, $tertiary $tertiary-start);
+	background: -ms-linear-gradient($deg,  $primary $primary-start,$primary $primary-stop,$secondary $secondary-start,$secondary $secondary-stop,$tertiary $tertiary-start,$tertiary $tertiary-start);
+	background: -o-linear-gradient($deg,  $primary $primary-start,$primary $primary-stop,$secondary $secondary-start,$secondary $secondary-stop,$tertiary 66.6666%,$tertiary $tertiary-start);
+	background: linear-gradient($deg,  $primary $primary-start,$primary $primary-stop,$secondary $secondary-start,$secondary $secondary-stop,$tertiary $tertiary-start,$tertiary $tertiary-start);
+}

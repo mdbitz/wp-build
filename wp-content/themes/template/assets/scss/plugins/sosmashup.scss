@@ -1,0 +1,21 @@
+.sosmashup_tiles_wrapper {
+    
+    .sosmashup_item {
+        width: 100%;
+        padding: 20px;
+        @include breakpoint($bp-bravo) {
+            width: 50%;
+            display: inline-block;
+        }
+        @include breakpoint($bp-charlie) {
+            width: 25%;
+            display: inline-block;
+        }
+        
+        .social_image.w_image {
+            height: 150px;
+        }
+        
+    }
+    
+}
